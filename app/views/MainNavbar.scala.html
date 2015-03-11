@@ -1,22 +1,19 @@
 @(pageName: String)
 
-<!-- Responsive navbar -->
-<div class="navbar navbar-fixed-top" role="navigation">
-  <div class="container">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-navbar">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <!--  Display three horizontal lines when navbar collapsed. -->
-        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="@routes.Application.home()">Never A Dull Moment</a>
+      <a class="navbar-brand" href="#"><img id="heading-logo" src="@routes.Assets.at("images/header-logo.jpg")" alt="Brand"></a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="@("active".when(pageName == "Home"))"><a href="@routes.Application.home()">Home</a></li>
-        <li class="@("active".when(pageName == "Page1"))"><a href="@routes.Application.page1()">Page 1</a></li>
-        <li class="@("active".when(pageName == "Page2"))"><a href="@routes.Application.page2()">Page 2</a></li>
-        <li class="@("active".when(pageName == "About"))"><a href="@routes.Application.about()">About</a></li>
-        <li class="@("active".when(pageName == "Contact"))"><a href="@routes.Application.contact()">Contact</a></li>
+        <li><a href="#">Store</a></li>
+        <li><a href="#Pueo">Pueo</a></li>
+        <li><a href="#Aukahi">Aukahi</a></li>
+        <li><a href="#Kamanu">Kamanu V6</a></li>
+        <li><a href="#Iho">Iho</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#NoGo"></a></li>
       </ul>
     </div>
   </div>
