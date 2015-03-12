@@ -2,10 +2,11 @@
  * Application stylesheet
  */
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+body{
+  margin-top: 81px;
+}
+.product {
+  width: 100%;
 }
 
 .navbar-nav > li {
