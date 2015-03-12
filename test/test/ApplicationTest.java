@@ -45,6 +45,17 @@ public class ApplicationTest {
 
 
   /**
+   * Exercise rendering the Pueo page.  Specifically, make sure that content passed into render appears on the page.
+   */
+  @Test
+  public void pueoTemplate() {
+    Content html = views.html.Home.render();
+    assertThat(contentType(html)).isEqualTo("text/html");
+    assertThat(contentAsString(html)).contains("The Pueo is the most versatile.");
+  }
+
+
+  /**
    * Ensure Bootstrap is properly configured.
    */
   @Test

@@ -42,7 +42,7 @@ public class IntegrationTest {
         browser.goTo("http://localhost:3333");
         assertThat(browser.pageSource()).contains("<body");
 
-        browser.goTo("http://localhost:3333/");
+        browser.goTo("http://localhost:3333/pueo");
         assertThat(browser.pageSource()).contains("<body");
       }
     });
