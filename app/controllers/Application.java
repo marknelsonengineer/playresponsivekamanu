@@ -10,8 +10,11 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.About;
+import views.html.Aukahi;
 import views.html.Home;
 import views.html.Pueo;
+import views.html.V6;
 
 
 /**
@@ -36,5 +39,35 @@ public class Application extends Controller {
    */
   public static Result pueo() {
     return ok(Pueo.render());
+  }
+
+
+  /**
+   * Aukahi home page.
+   *
+   * @return HTTP OK with page content.
+   */
+  public static Result aukahi() {
+    return ok(Aukahi.render());
+  }
+
+
+  /**
+   * V6 home page.
+   *
+   * @return HTTP OK with page content.
+   */
+  public static Result v6() {
+    return ok(V6.render());
+  }
+
+
+  /**
+   * About home page.
+   *
+   * @return HTTP OK with page content.
+   */
+  public static Result about() {
+    return ok(About.render());
   }
 }

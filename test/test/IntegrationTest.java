@@ -60,4 +60,46 @@ public class IntegrationTest {
       }
     });
   }
+
+
+  /**
+   * Check if the Aukahi page is shown.
+   */
+  @Test
+  public void testAukahi() {
+    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+      public void invoke(TestBrowser browser) {
+        browser.goTo("http://localhost:3333/aukahi");
+        assertThat(browser.pageSource()).contains("Tahitian V1 design with Hawaiian attitude");
+      }
+    });
+  }
+
+
+  /**
+   * Check if the V6 page is shown.
+   */
+  @Test
+  public void testV6() {
+    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+      public void invoke(TestBrowser browser) {
+        browser.goTo("http://localhost:3333/v6");
+        assertThat(browser.pageSource()).contains("The most exciting thing in paddling since the T-Top");
+      }
+    });
+  }
+
+
+  /**
+   * Check if the About page is shown.
+   */
+  @Test
+  public void testAbout() {
+    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+      public void invoke(TestBrowser browser) {
+        browser.goTo("http://localhost:3333/about");
+        assertThat(browser.pageSource()).contains("Become the most amazing company in the entire world");
+      }
+    });
+  }
 }
