@@ -47,4 +47,17 @@ public class IntegrationTest {
       }
     });
   }
+
+  /**
+   * Check if the Pueo page is shown.
+   */
+  @Test
+  public void testPueo() {
+    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+      public void invoke(TestBrowser browser) {
+        browser.goTo("http://localhost:3333/pueo");
+        assertThat(browser.pageSource()).contains("The Pueo is the most versatile all-around canoe that we know");
+      }
+    });
+  }
 }

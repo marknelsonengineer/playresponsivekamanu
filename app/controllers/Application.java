@@ -11,6 +11,7 @@ package controllers;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.Home;
+import views.html.Pueo;
 
 
 /**
@@ -25,5 +26,15 @@ public class Application extends Controller {
    */
   public static Result home() {
     return ok(Home.render());
+  }
+
+
+  /**
+   * Pueo home page.
+   *
+   * @return HTTP OK with page content.
+   */
+  public static Result pueo() {
+    return ok(Pueo.render());
   }
 }
