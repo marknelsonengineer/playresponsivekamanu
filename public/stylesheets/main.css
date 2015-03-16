@@ -2,6 +2,15 @@
  * Application stylesheet
  */
 
+body {
+  padding-top: 81px;  /* Move body of page below navbar. */
+}
+
+img.splash {
+  display: block;
+  width: 100%;
+}
+
 img {
   display: block;
   margin-left: auto;
